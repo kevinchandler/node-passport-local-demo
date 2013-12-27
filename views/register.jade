@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  form(action='/dashboard/register', method='POST')
+      div
+          label Username:
+          input(type='text', name='username')
+        div
+          label Password:
+          input(type='password', name='password')
+        div
+          label Email:
+          input(type='email', name='email')
+        div
+          input(type='submit', value='Register')
+  

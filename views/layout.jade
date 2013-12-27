@@ -1,0 +1,18 @@
+doctype html
+html(ng-app)
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js")
+    script(src='/controllers/mainController.js')
+  body
+    if !locals.user
+      br
+      a(href='/dashboard/login') Login
+      br
+      a(href='/dashboard/register') Register
+    if locals.user
+      a(href='/dashboard') Dashboard
+      br
+      a(href='/dashboard/logout') logout
+    block content
